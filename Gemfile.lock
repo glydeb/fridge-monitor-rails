@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 10285e977b7be785e34a107811aec7e363d5621a
+  revision: 490804f7d5dd724c91c6b19f8c0fcc71a07df616
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -99,8 +99,12 @@ GEM
   specs:
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    argon2-kdf (0.1.7)
     bcrypt (3.1.18)
     bindex (0.8.1)
+    blind_index (2.3.2)
+      activesupport (>= 5.2)
+      argon2-kdf (>= 0.1.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -140,6 +144,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    lockbox (1.2.0)
     loofah (2.20.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -244,12 +249,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  blind_index
   bootsnap
   capybara
   debug
   devise
   importmap-rails
   jbuilder
+  lockbox
   pg (~> 1.1)
   puma (>= 5.0)
   rails!
