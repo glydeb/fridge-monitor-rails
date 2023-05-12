@@ -33,3 +33,9 @@
 /config/credentials/test.key
 
 /config/credentials/development.key
+
+# Ignore local .env file
+.env
+
+# Ignore dev container database initializer
+init.sql
