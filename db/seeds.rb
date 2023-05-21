@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+case Rails.env
+when "development"
+  # Add development seeds here
+  User.create(email: "junk@glyde.dev", password: "admin123") unless User.find_by(email: "junk@glyde.dev").present?
+end
