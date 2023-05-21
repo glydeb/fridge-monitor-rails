@@ -1,0 +1,57 @@
+<%= form_with(model: fridge) do |form| %>
+  <% if fridge.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fridge.errors.count, "error") %> prohibited this fridge from being saved:</h2>
+
+      <ul>
+        <% fridge.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :has_refrig, style: "display: block" %>
+    <%= form.check_box :has_refrig %>
+  </div>
+
+  <div>
+    <%= form.label :has_freezer, style: "display: block" %>
+    <%= form.check_box :has_freezer %>
+  </div>
+
+  <div>
+    <%= form.label :is_healthy, style: "display: block" %>
+    <%= form.check_box :is_healthy %>
+  </div>
+
+  <div>
+    <%= form.label :last_alerted, style: "display: block" %>
+    <%= form.datetime_field :last_alerted %>
+  </div>
+
+  <div>
+    <%= form.label :last_reported, style: "display: block" %>
+    <%= form.datetime_field :last_reported %>
+  </div>
+
+  <div>
+    <%= form.label :report_frequency, style: "display: block" %>
+    <%= form.number_field :report_frequency %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

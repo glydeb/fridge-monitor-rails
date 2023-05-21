@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  user: one
+  has_refrig: false
+  has_freezer: false
+  is_healthy: false
+  last_alerted: 2023-05-21 21:05:29
+  last_reported: 2023-05-21 21:05:29
+  report_frequency: 1
+
+two:
+  name: MyString
+  user: two
+  has_refrig: false
+  has_freezer: false
+  is_healthy: false
+  last_alerted: 2023-05-21 21:05:29
+  last_reported: 2023-05-21 21:05:29
+  report_frequency: 1
